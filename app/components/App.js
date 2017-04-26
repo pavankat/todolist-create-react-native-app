@@ -8,9 +8,9 @@ import React, { Component } from "react";
 //View is like a div
 //Text is like a paragraph tag
 import { View, Text, ActivityIndicator, StyleSheet, Platform, ListView, Keyboard, AsyncStorage } from "react-native";
-import Header from "./app/components/Header";
-import Footer from "./app/components/Footer";
-import Row from "./app/components/Row";
+import Header from "./app/Header";
+import Footer from "./app/Footer";
+import Row from "./app/Row";
 //var Row = require('./Row')
 
 const filterItems = (filter, items) => {
@@ -22,7 +22,7 @@ const filterItems = (filter, items) => {
   });
 }
 
-export default class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -254,3 +254,5 @@ const styles = StyleSheet.create({
     borderColor: "#F5F5F5"
   }
 })
+
+export default App;
