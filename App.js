@@ -56,9 +56,9 @@ export default class App extends React.Component {
       }, 2000)
     */
 
-    AsyncStorage.getItem("items").then((json) => {
+    AsyncStorage.getItem("items").then((itemData) => {
       try {
-        const items = JSON.parse(json);
+        const items = JSON.parse(itemData);
 
         //set loading to false after items get loaded from AsyncStorage
         this.setSource(items, items, { loading: false}); 
